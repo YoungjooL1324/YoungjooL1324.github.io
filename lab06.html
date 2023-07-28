@@ -17,7 +17,16 @@
       I am a student in Dr. Parr's Geog 50 class
     </p>
 
-    <script>
+    
+    <!-- Next portion of the website -->
+    
+    <h3 hidden id = "header" style = "font-family: Georgia; background-color: #ffddcc"> What else do I enjoy doing?</h3>
+    <p class = "data">
+      In addition, I am  a <em><del>sophomore</del> at <a href = "https://home.dartmouth.edu/">Dartmouth college</a></em> currently enjoying Sophomore summer.
+      Outside of the Classroom, I am on the <strong>Men's Rugby team</strong> which I really enjoy. 
+    </p>
+
+        <script>
       // $("p") <-- this will reference all of the <p> tags
       // $("#job") <-- this will refence all #job id's
 
@@ -30,20 +39,13 @@
             }
         );
 
-      $("h3").hover(
+      $("h3#header").hover(
         function() {
-          console.log("h3 hover");
+          $("h3").show();
         }
       );
     </script>
     
-    <!-- Next portion of the website -->
-    
-    <h3 style = "font-family: Georgia; background-color: #ffddcc"> What else do I enjoy doing?</h3>
-    <p class = "data">
-      In addition, I am  a <em><del>sophomore</del> at <a href = "https://home.dartmouth.edu/">Dartmouth college</a></em> currently enjoying Sophomore summer.
-      Outside of the Classroom, I am on the <strong>Men's Rugby team</strong> which I really enjoy. 
-    </p>
     <div id = "DRFC">
       <a href = "http://www.dartmouthrfc.com/"><img id="DRFC-img" src= "https://dartmouthsports.com/images/2018/6/4/corey1.jpg"></a>
       <br>
