@@ -5,7 +5,7 @@ p { text-align: justify;
   }
 h1 { background-color: #88ff88; }
 h3 { background-color: #ffddcc; }
-<!-- ID's referred by hashtag and refer too a specific item --> 
+<!-- ID's referred by hashtag and refer a specific item --> 
 #DRFC {
   border: red dashed;
   padding: 10px;
@@ -25,7 +25,7 @@ th,td {
   padding: 3px;
   
 }
-<!-- classes used too refer too multiple kinds of things, here is me styling it below -->  
+<!-- classes used refer multiple kinds of things, here is me styling it below -->  
 .data {
   color: #666666;
   font-family: Georgia;
