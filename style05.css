@@ -16,8 +16,8 @@ h3 { background-color: #ffddcc; }
   float: right;
 }
 #DRFC-img {
-  width: 95%;
-  height: 95%;
+  width: 100px;
+  height: 200px;
 }
 
 th,td {
