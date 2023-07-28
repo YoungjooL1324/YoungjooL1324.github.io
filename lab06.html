@@ -36,13 +36,14 @@
       $("button#job").click( //everytime job button is clicked run function below
             function() {
               $("p#job").toggle();
-              $("h3#header").show();
+              
             }
         );
 
       $("table").hover(
         function() {
           console.log("table hover;");
+          $("h3").toggle();
         }
       );
         
