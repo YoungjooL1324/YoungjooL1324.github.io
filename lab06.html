@@ -20,7 +20,7 @@
     
     <!-- Next portion of the website -->
     
-    <h3 hidden id = "header" style = "font-family: Georgia; background-color: #ffddcc"> What else do I enjoy doing?</h3>
+    <h3 style = "font-family: Georgia; background-color: #ffddcc"> What else do I enjoy doing?</h3>
     <p class = "data">
       In addition, I am  a <em><del>sophomore</del> at <a href = "https://home.dartmouth.edu/">Dartmouth college</a></em> currently enjoying Sophomore summer.
       Outside of the Classroom, I am on the <strong>Men's Rugby team</strong> which I really enjoy. 
@@ -36,14 +36,17 @@
       $("button#job").click( //everytime job button is clicked run function below
             function() {
               $("p#job").toggle();
+              $("h3#header").show();
             }
         );
 
-      $("h3#header").hover(
+      $("h3").hover(
         function() {
-          $("h3").show();
+          console.log("h3 hover;");
         }
       );
+        
+
     </script>
     
     <div id = "DRFC">
