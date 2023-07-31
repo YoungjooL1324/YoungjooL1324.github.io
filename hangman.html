@@ -13,7 +13,8 @@
           var word = "f i s h";
           var blanks = "_ _ _ _";
           var guesses = "";
-           
+
+          $("#word").html(blanks);
           $(".letter").click( //when letter span is clicked run function below
             function() { 
               var id = $(this).attr('id'); //get the attribute(the id) of the current span clicked 
