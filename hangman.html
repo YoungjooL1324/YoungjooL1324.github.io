@@ -13,7 +13,7 @@
           var word = "p e n c i l";
           var blanks = "_ _ _ _ _ _";
           var guesses = "";
-           var game_over = False;
+           var game_over = false;
 
           $("#word").html(blanks);
           $(".letter").click( //when letter span is clicked run function below
@@ -33,7 +33,7 @@
                 if(total_guesses <= 0) {
                   console.log("now less than 0 guesses");
                   $("#error_msg").html("you are out of guesses, YOU LOSE!");
-                  game_over = True;
+                  game_over = true;
                 }else{
                   $("#numleft").html(total_guesses);
 
