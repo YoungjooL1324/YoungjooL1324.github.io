@@ -21,8 +21,8 @@
               var id = $(this).attr('id'); //get the attribute(the id) of the current span clicked 
               console.log("Clicked on " + id);
               console.log("Num of guesses left " + total_guesses);
-
-              if (guesses.includes(id) ){
+              if(!game_over) {
+                              if (guesses.includes(id) ){
                 $("#error_msg").html("You already guessed " + id);
               }else{
                 guesses = guesses + id;
@@ -47,12 +47,14 @@
                   }
 
                   if (blanks == word){
-                    $("error_msg").html("you won!");
+                    $("#error_msg").html("you won!");
                   }
 
                   
                 }
               }
+              }
+
               
             }
           )
