@@ -11,7 +11,8 @@
     </style>
 
     <script src="nhCoastalRegions.geojson">
-      
+    </script>
+    <script src="nhDesignatedRivers.geojson">
     </script>
   
     <script>
@@ -36,6 +37,7 @@
                     }
                     }).addTo(map);
           }  
+          L.geoJson(rivers_geojson).addTo(map);
     </script>
   </head>
   <body onload="initialize()"> 
