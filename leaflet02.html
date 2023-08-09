@@ -32,8 +32,7 @@
                     weight: 5,
                     oapacity: .5,
                     onEachFeature: function(feature, layer) {
-                      layer.bindPopup("<b>"Coast Name: " +
-                        feature.properties.Site_Name + "<\b>");
+                      layer.bindPopup("<b>"Coast Name: " + feature.properties.Site_Name + "<\b>");
                     }
                     }).addTo(map);
           }  
