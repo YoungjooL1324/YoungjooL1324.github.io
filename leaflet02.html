@@ -36,8 +36,9 @@
                       layer.bindPopup("<b> Coast Name: " + feature.properties.Site_Name + "<\b>");
                     }
                     }).addTo(map);
-          }  
           L.geoJson(rivers_geojson).addTo(map);
+          }  
+          
     </script>
   </head>
   <body onload="initialize()"> 
