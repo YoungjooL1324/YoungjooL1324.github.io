@@ -10,7 +10,7 @@
       html, body { height: 100%; margin: 0; padding: 0; }
     </style>
 
-    <script src="NH_Coastal_Restoration_Database.geojson">
+    <script src="nhtrails.gesjson">
       
     </script>
   
@@ -22,10 +22,16 @@
                                           });
         function initialize() {
           var map = L.map('map', { 
-                      center: [ 43.7304, -72.2887 ],
+                      center: [ 43.7034, -72.2887 ],
                       zoom: 15,
                       layers: [OpenStreetMap_HOT]
               });
+
+          L.geoJson(trails_geosjon,
+                    { color: "blue",
+                    weight: 5,
+                    oapacity: .5
+                    }).addTo(map);
           }  
     </script>
   </head>
