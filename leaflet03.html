@@ -68,7 +68,7 @@
                     }
                     });
 
-          $("#toggleTrails").click(function() {
+          $("#toggleRivers").click(function() {
             if(riversVisible) {
               riversVisible = false;
               riversLayer.removeFrom(map);
@@ -91,5 +91,8 @@
   <body onload="initialize()"> 
     <h1>Hello Campus!</h1>
     <div id = "map"></div>
+    <div id = "button">
+      <button id="toggleRivers"> Toggle the Rivers layer.</button>
+    </div>
   </body>
 </html>q
