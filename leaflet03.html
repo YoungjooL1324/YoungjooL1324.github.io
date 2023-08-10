@@ -71,17 +71,17 @@
           $("#toggleTrails").click(function() {
             if(riversVisible) {
               riversVisible = false;
-              riversLayers.removeFrom(map);
+              riversLayer.removeFrom(map);
             }else{
               riversVisible = true;
-              riversLayers.addTo(map);
+              riversLayer.addTo(map);
             }
             if(coastVisible) {
               coastVisible = false;
-              coastLayers.removeFrom(map);
+              coastLayer.removeFrom(map);
             }else{
               coastVisible = true;
-              coastLayers.addTo(map);
+              coastLayer.addTo(map);
             }
           })
           }  
