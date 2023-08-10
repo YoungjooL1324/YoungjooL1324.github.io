@@ -21,7 +21,26 @@
                                           { maxZoom: 19, 
                                               attribution: '&copy; <a href="http:/www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
                                           });
-        function initialize() {
+        
+      function riverSymbology(feature) {
+        var length = feature.properties.LENGTH;
+        var riverWidth = 2;
+        var riverColor = "#00008B";
+
+        if (length > 500.0) {
+          lineColor = "#777777"; lineWidth = 4;
+        }
+        if (length > 1000) {
+          lineColor = "e9a3c9"; lineWidth = 6;
+        }
+
+        return {
+          color: lineColor,
+          weight: lineWidth,
+          opacity: 1
+        };
+      }
+      function initialize() {
           var map = L.map('map', { 
                       center: [ 43.7034, -72.2887 ],
                       zoom: 15,
@@ -38,12 +57,10 @@
                     }).addTo(map);
           
           riversLayer = L.geoJson(rivers_geojson,
-                                  { color: "ee87ff",
-                                    weight: 5,
-                                    opacity: .5,
+                                  { style: riverSymbology,
                                   onEachFeature: function(feature, layer) {
                       layer.bindPopup("<b> Coast Name: " + feature.properties.River_Name + "<\b><br>" + "Length: " + 
-                                      features.properties.LENGTH + "<br>" + "River_Sect: " + features.properties.River_Sect);
+                                      feature.properties.LENGTH + "<br>" + "River_Sect: " + feature.properties.River_Sect);
                     }
                     }).addTo(map);
           }  
