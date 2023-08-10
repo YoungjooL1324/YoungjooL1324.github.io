@@ -17,6 +17,9 @@
   
     <script>
       var riversLayer;
+      var riversVisible = false;
+      var coastLayer;
+      var coastVisible = false;
       var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
                                           { maxZoom: 19, 
                                               attribution: '&copy; <a href="http:/www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
@@ -47,14 +50,14 @@
                       layers: [OpenStreetMap_HOT]
               });
 
-          L.geoJson(coast_geojson,
+          coastLayer = L.geoJson(coast_geojson,
                     { color: "ee87ff",
                     weight: 5,
                     opacity: .5,
                     onEachFeature: function(feature, layer) {
                       layer.bindPopup("<b> Coast Name: " + feature.properties.Site_Name + "<\b>");
                     }
-                    }).addTo(map);
+                    });
           
           riversLayer = L.geoJson(rivers_geojson,
                                   { style: riverSymbology,
@@ -62,7 +65,24 @@
                       layer.bindPopup("<b> Coast Name: " + feature.properties.River_Name + "<\b><br>" + "Length: " + 
                                       feature.properties.LENGTH + "<br>" + "River_Sect: " + feature.properties.River_Sect);
                     }
-                    }).addTo(map);
+                    });
+
+          $("#toggleTrails").click(function() {
+            if(riversVisible) {
+              riversVisible = false;
+              riversLayers.removeFrom(map);
+            }else{
+              riversVisible = true;
+              riversLayers.addTo(map);
+            }
+            if(coastVisible) {
+              coastVisible = false;
+              coastLayers.removeFrom(map);
+            }else{
+              coastVisible = true;
+              coastLayers.addTo(map);
+            }
+          })
           }  
           
     </script>
