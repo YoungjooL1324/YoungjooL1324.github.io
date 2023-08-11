@@ -17,6 +17,7 @@
     </script>
   
     <script>
+      var riversLayer;
       var riversVisible = true;
       var coastVisible = true;
       var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
@@ -58,7 +59,7 @@
           });
 
         $.when(response).done(function() {
-              var riversLayer = L.geoJson(response.responseJSON,
+              riversLayer = L.geoJson(response.responseJSON,
                             { style: riverSymbology,
                             onEachFeature: function(feature, layer) {
                 layer.bindPopup("<b> Coast Name: " + feature.properties.River_Name + "<\b><br>" + "Length: " + 
