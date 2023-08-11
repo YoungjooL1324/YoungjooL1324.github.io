@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title> Hello Campus!</title>
+    <link rel ="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  
+    <style>
+      #map { height: 400px; width: 700px; }
+      html, body { height: 100%; margin: 0; padding: 0; }
+    </style>
+
+    <script src="nhCoastalRegions.geojson">
+    </script>
+    <script src="nhDesignatedRivers.geojson">
+    </script>
+  
+    <script>
+      var riversVisible = true;
+      var coastVisible = true;
+      var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+                                          { maxZoom: 19, 
+                                              attribution: '&copy; <a href="http:/www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
+                                          });
+        
+      function riverSymbology(feature) {
+        var length = feature.properties.LENGTH;
+        var riverWidth = 2;
+        var riverColor = "#00008B";
+
+        if (length > 500.0) {
+          riverColor = "#777777"; lineWidth = 4;
+        }
+        if (length > 1000) {
+          riverColor = "#e9a3c9"; lineWidth = 6;
+        }
+
+        return {
+          color: riverColor,
+          weight: riverWidth,
+          opacity: 1
+        };
+      }
+      function initialize() {
+          var map = L.map('map', { 
+                      center: [ 43.7034, -72.2887 ],
+                      zoom: 15,
+                      layers: [OpenStreetMap_HOT]
+              });
+          var response = $.ajax({
+            url: "nhDesignatedRivers.geojson",
+            dataType: "json",
+            success: console.log("river data loaded!"),
+            error: function(xhr){
+              alert(xhr.statusText);
+            }
+          });
+
+        $.when(response).done(function() {
+              var riversLayer = L.geoJson(response.responseJSON,
+                            { style: riverSymbology,
+                            onEachFeature: function(feature, layer) {
+                layer.bindPopup("<b> Coast Name: " + feature.properties.River_Name + "<\b><br>" + "Length: " + 
+                                feature.properties.LENGTH + "<br>" + "River_Sect: " + feature.properties.River_Sect);
+              }
+              });
+              #("#toggleTrails").show();
+              $("#toggleRivers").click(function() {
+                    if(riversVisible) {
+                      riversVisible = false;
+                      riversLayer.removeFrom(map);
+                    }else{
+                      riversVisible = true;
+                      riversLayer.addTo(map);
+                    }
+              }) 
+        })
+        L.geoJson(coast_geojson,
+        { color: "ee87ff",
+        weight: 5,
+        opacity: .5,
+        onEachFeature: function(feature, layer) {
+          layer.bindPopup("<b> Coast Name: " + feature.properties.Site_Name + "<\b>");
+        }
+        });
+    
+  }  
+          
+    </script>
+  </head>
+  <body onload="initialize()"> 
+    <h1>Hello Campus!</h1>
+    <div id = "map"></div>
+    <div id = "button">
+      <button id="toggleRivers" hidden> Toggle the layers.</button>
+    </div>
+  </body>
+</html>
