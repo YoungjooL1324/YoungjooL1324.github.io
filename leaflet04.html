@@ -64,7 +64,7 @@
                 layer.bindPopup("<b> Coast Name: " + feature.properties.River_Name + "<\b><br>" + "Length: " + 
                                 feature.properties.LENGTH + "<br>" + "River_Sect: " + feature.properties.River_Sect);
               }
-              });
+              }).addTo(map);
               $("#toggleRivers").show();
               $("#toggleRivers").click(function() {
                     if(riversVisible) {
