@@ -11,6 +11,16 @@
       html, body { height: 100%; margin: 0; padding: 0; }
     </style>
 
+    <style>
+      #legend {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid #000;
+      }
+    </style>
+
     <script src="WAHighSchoolData.geojson">
     </script>
     <script src="WAPovertyData.geojson">
@@ -86,6 +96,7 @@
   <body onload="initialize()"> 
     <h1>An Examination of High School Graduation and Poverty in Washington State</h1>
     <div id = "map"></div>
+    <div id="legend">Legend</div>
     <div id = "button">
       <button id="toggleSchools" hidden> Toggle the layers.</button>
     </div>
