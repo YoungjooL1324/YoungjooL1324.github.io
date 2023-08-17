@@ -11,7 +11,7 @@
       html, body { height: 100%; margin: 0; padding: 0; }
     </style>
 
-    <script src="No_High_School_Diploma.geojson">
+    <script src="WAHighSchoolData.geojson">
     </script>
     <script src="Population_Living_in_Poverty.geojson">
     </script>
@@ -50,7 +50,7 @@
                       layers: [OpenStreetMap_HOT]
               });
           var response = $.ajax({
-            url: "No_High_School_Diploma.geojson",
+            url: "WAHighSchoolData.geojson",
             dataType: "json",
             success: console.log("High school data loaded!"),
             error: function(xhr){
