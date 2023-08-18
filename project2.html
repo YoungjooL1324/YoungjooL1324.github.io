@@ -3,29 +3,15 @@
   <head>
     <title> Hello Campus!</title>
     <link rel ="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   
     <style>
       #map { height: 400px; width: 700px; }
-      #graph { height: 300px; width: 600px; }
       html, body { height: 100%; margin: 0; padding: 0; }
-
-/*       .button {
-        position: absolute;
-        top:50%;
-        background-color:#0a0a23;
-        color: #fff;
-        border:none; 
-        border-radius:10px; 
-        padding:15px;
-        min-height:30px; 
-        min-width: 120px;
-      } */
     </style>
 
-    <script src="WAPovertyData.geojson">
+    <script src="nhCoastalRegions.geojson">
     </script>
     <script src="WAHighSchoolData.geojson">
     </script>
@@ -61,10 +47,10 @@
         var numDiplomas = feature.properties.Percent_Living_in_Poverty;
         var areaColor = "#00008B";
 
-        if (numDiplomas > 20) {
-          areaColor = "#edc605"; 
-        }
         if (numDiplomas > 30) {
+          areaColor = "#eb5e0c"; 
+        }
+        if (numDiplomas > 50) {
           areaColor = "#eb0c0f"; 
         }else{
           opacity: 1;
@@ -82,11 +68,6 @@
                       zoom: 10,
                       layers: [OpenStreetMap_HOT]
               });
-          var map2 = L.map('map', { 
-                      center: [ 100.636, -122.075 ],
-                      zoom: 10,
-                      layers: [OpenStreetMap_HOT]
-              });
           var response = $.ajax({
             url: "WAHighSchoolData.geojson",
             dataType: "json",
@@ -101,7 +82,7 @@
               schoolLayer = L.geoJson(response.responseJSON,
                             { style: schoolSymbology,
                             onEachFeature: function(feature, layer) {
-                layer.bindPopup("<b> Number Without Diploma: " + feature.properties.Num_Without_Diploma + "<br>" + "Census Tract: " + 
+                layer.bindPopup("<b> Number Without Diploma: " + feature.properties.Num_Without_Diploma + "<\b><br>" + "Census Tract: " + 
                                 feature.properties.Census_Tract + "<br>" + "Percent Without Diploma: " + feature.properties.Percent_Without_Diploma);
               }
               }).addTo(map);
@@ -153,30 +134,13 @@
   </head>
   <body onload="initialize()"> 
     <h1>Visualizing the relationship between education and poverty</h1>
-    It is common knowledge that an inadequate education can lead to an increased chance of poverty
-
-<!--     <div id = "graph" class="infogram-embed" data-id="21b6f5d2-2f11-4587-b6bf-8b5d477c4678" data-type="interactive" data-title="income"></div>
-    <script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];
-                               if(window[t]&&window[t].initialized)window[t].process&&window[t].process();
-                               else if(!e.getElementById(n)){
-                                 var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");
-    </script> -->
-
     <div id = "map"></div>
-      <button id="toggleSchool"> Highschool graduation layer</button>
+    <div id = "button">
+      <button id="toggleSchool" hidden> Highschool graduation layer</button>
       <button id="togglePoverty" hidden> Poverty layer</button>
     </div>
-    <br>
     The national average high school graduation rate is 85%. 
     In the map above I've highlighted the counties in Washington which have a percentage below that rate. 
     Hover above them to learn more statistics.
-
-    In the map above, the most poverty stricken area Burien has a poverty rate of 11.7%
-
-    <div id = "citation">
-      https://www.census.gov/
-      https://nces.ed.gov/programs/coe/indicator/coi/high-school-graduation-rates
-      
-    </div>
   </body>
 </html>
