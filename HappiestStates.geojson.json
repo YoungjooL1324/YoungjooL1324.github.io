@@ -1,0 +1,352 @@
+[
+  {
+    "state": "Hawaii",
+    "TotalHappinessScore": 66.31,
+    "EmotionalAndPhysicalWellBeingRank": 1,
+    "CommunityAndEnvironmentRank": 7,
+    "WorkEnvironmentRank": 17
+  },
+  {
+    "state": "Maryland",
+    "TotalHappinessScore": 62.6,
+    "EmotionalAndPhysicalWellBeingRank": 5,
+    "CommunityAndEnvironmentRank": 4,
+    "WorkEnvironmentRank": 24
+  },
+  {
+    "state": "Minnesota",
+    "TotalHappinessScore": 62.43,
+    "EmotionalAndPhysicalWellBeingRank": 10,
+    "CommunityAndEnvironmentRank": 9,
+    "WorkEnvironmentRank": 2
+  },
+  {
+    "state": "Utah",
+    "TotalHappinessScore": 62.41,
+    "EmotionalAndPhysicalWellBeingRank": 29,
+    "CommunityAndEnvironmentRank": 1,
+    "WorkEnvironmentRank": 1
+  },
+  {
+    "state": "New Jersey",
+    "TotalHappinessScore": 61.71,
+    "EmotionalAndPhysicalWellBeingRank": 2,
+    "CommunityAndEnvironmentRank": 19,
+    "WorkEnvironmentRank": 28
+  },
+  {
+    "state": "Idaho",
+    "TotalHappinessScore": 61.6,
+    "EmotionalAndPhysicalWellBeingRank": 25,
+    "CommunityAndEnvironmentRank": 2,
+    "WorkEnvironmentRank": 3
+  },
+  {
+    "state": "California",
+    "TotalHappinessScore": 59.97,
+    "EmotionalAndPhysicalWellBeingRank": 12,
+    "CommunityAndEnvironmentRank": 5,
+    "WorkEnvironmentRank": 14
+  },
+  {
+    "state": "Illinois",
+    "TotalHappinessScore": 58.59,
+    "EmotionalAndPhysicalWellBeingRank": 3,
+    "CommunityAndEnvironmentRank": 34,
+    "WorkEnvironmentRank": 33
+  },
+  {
+    "state": "Nebraska",
+    "TotalHappinessScore": 58.19,
+    "EmotionalAndPhysicalWellBeingRank": 13,
+    "CommunityAndEnvironmentRank": 22,
+    "WorkEnvironmentRank": 7
+  },
+  {
+    "state": "Connecticut",
+    "TotalHappinessScore": 58.15,
+    "EmotionalAndPhysicalWellBeingRank": 7,
+    "CommunityAndEnvironmentRank": 28,
+    "WorkEnvironmentRank": 21
+  },
+  {
+    "state": "Virginia",
+    "TotalHappinessScore": 57.84,
+    "EmotionalAndPhysicalWellBeingRank": 9,
+    "CommunityAndEnvironmentRank": 27,
+    "WorkEnvironmentRank": 20
+  },
+  {
+    "state": "South Dakota",
+    "TotalHappinessScore": 57.6,
+    "EmotionalAndPhysicalWellBeingRank": 15,
+    "CommunityAndEnvironmentRank": 15,
+    "WorkEnvironmentRank": 10
+  },
+  {
+    "state": "North Dakota",
+    "TotalHappinessScore": 57.37,
+    "EmotionalAndPhysicalWellBeingRank": 19,
+    "CommunityAndEnvironmentRank": 10,
+    "WorkEnvironmentRank": 9
+  },
+  {
+    "state": "Massachusetts",
+    "TotalHappinessScore": 57.12,
+    "EmotionalAndPhysicalWellBeingRank": 6,
+    "CommunityAndEnvironmentRank": 41,
+    "WorkEnvironmentRank": 15
+  },
+  {
+    "state": "New Hampshire",
+    "TotalHappinessScore": 56.46,
+    "EmotionalAndPhysicalWellBeingRank": 18,
+    "CommunityAndEnvironmentRank": 20,
+    "WorkEnvironmentRank": 13
+  },
+  {
+    "state": "Iowa",
+    "TotalHappinessScore": 55.57,
+    "EmotionalAndPhysicalWellBeingRank": 21,
+    "CommunityAndEnvironmentRank": 29,
+    "WorkEnvironmentRank": 6
+  },
+  {
+    "state": "Delaware",
+    "TotalHappinessScore": 55.16,
+    "EmotionalAndPhysicalWellBeingRank": 11,
+    "CommunityAndEnvironmentRank": 18,
+    "WorkEnvironmentRank": 41
+  },
+  {
+    "state": "Florida",
+    "TotalHappinessScore": 55.08,
+    "EmotionalAndPhysicalWellBeingRank": 4,
+    "CommunityAndEnvironmentRank": 48,
+    "WorkEnvironmentRank": 30
+  },
+  {
+    "state": "Georgia",
+    "TotalHappinessScore": 54.78,
+    "EmotionalAndPhysicalWellBeingRank": 16,
+    "CommunityAndEnvironmentRank": 14,
+    "WorkEnvironmentRank": 32
+  },
+  {
+    "state": "North Carolina",
+    "TotalHappinessScore": 53.65,
+    "EmotionalAndPhysicalWellBeingRank": 14,
+    "CommunityAndEnvironmentRank": 40,
+    "WorkEnvironmentRank": 25
+  },
+  {
+    "state": "Wisconsin",
+    "TotalHappinessScore": 53.61,
+    "EmotionalAndPhysicalWellBeingRank": 20,
+    "CommunityAndEnvironmentRank": 37,
+    "WorkEnvironmentRank": 16
+  },
+  {
+    "state": "Washington",
+    "TotalHappinessScore": 53.53,
+    "EmotionalAndPhysicalWellBeingRank": 33,
+    "CommunityAndEnvironmentRank": 8,
+    "WorkEnvironmentRank": 5
+  },
+  {
+    "state": "New York",
+    "TotalHappinessScore": 53.36,
+    "EmotionalAndPhysicalWellBeingRank": 8,
+    "CommunityAndEnvironmentRank": 45,
+    "WorkEnvironmentRank": 42
+  },
+  {
+    "state": "Maine",
+    "TotalHappinessScore": 52.67,
+    "EmotionalAndPhysicalWellBeingRank": 22,
+    "CommunityAndEnvironmentRank": 35,
+    "WorkEnvironmentRank": 19
+  },
+  {
+    "state": "Wyoming",
+    "TotalHappinessScore": 52.4,
+    "EmotionalAndPhysicalWellBeingRank": 36,
+    "CommunityAndEnvironmentRank": 3,
+    "WorkEnvironmentRank": 31
+  },
+  {
+    "state": "Oregon",
+    "TotalHappinessScore": 52.11,
+    "EmotionalAndPhysicalWellBeingRank": 30,
+    "CommunityAndEnvironmentRank": 23,
+    "WorkEnvironmentRank": 12
+  },
+  {
+    "state": "Pennsylvania",
+    "TotalHappinessScore": 51.87,
+    "EmotionalAndPhysicalWellBeingRank": 26,
+    "CommunityAndEnvironmentRank": 21,
+    "WorkEnvironmentRank": 34
+  },
+  {
+    "state": "Rhode Island",
+    "TotalHappinessScore": 51.55,
+    "EmotionalAndPhysicalWellBeingRank": 23,
+    "CommunityAndEnvironmentRank": 43,
+    "WorkEnvironmentRank": 18
+  },
+  {
+    "state": "Montana",
+    "TotalHappinessScore": 51.34,
+    "EmotionalAndPhysicalWellBeingRank": 41,
+    "CommunityAndEnvironmentRank": 13,
+    "WorkEnvironmentRank": 4
+  },
+  {
+    "state": "Colorado",
+    "TotalHappinessScore": 50.7,
+    "EmotionalAndPhysicalWellBeingRank": 27,
+    "CommunityAndEnvironmentRank": 47,
+    "WorkEnvironmentRank": 8
+  },
+  {
+    "state": "Arizona",
+    "TotalHappinessScore": 50.22,
+    "EmotionalAndPhysicalWellBeingRank": 28,
+    "CommunityAndEnvironmentRank": 33,
+    "WorkEnvironmentRank": 29
+  },
+  {
+    "state": "Kansas",
+    "TotalHappinessScore": 49.9,
+    "EmotionalAndPhysicalWellBeingRank": 31,
+    "CommunityAndEnvironmentRank": 26,
+    "WorkEnvironmentRank": 23
+  },
+  {
+    "state": "South Carolina",
+    "TotalHappinessScore": 49.62,
+    "EmotionalAndPhysicalWellBeingRank": 32,
+    "CommunityAndEnvironmentRank": 11,
+    "WorkEnvironmentRank": 38
+  },
+  {
+    "state": "Vermont",
+    "TotalHappinessScore": 48.46,
+    "EmotionalAndPhysicalWellBeingRank": 34,
+    "CommunityAndEnvironmentRank": 44,
+    "WorkEnvironmentRank": 11
+  },
+  {
+    "state": "Nevada",
+    "TotalHappinessScore": 48.16,
+    "EmotionalAndPhysicalWellBeingRank": 35,
+    "CommunityAndEnvironmentRank": 6,
+    "WorkEnvironmentRank": 43
+  },
+  {
+    "state": "Texas",
+    "TotalHappinessScore": 47.74,
+    "EmotionalAndPhysicalWellBeingRank": 17,
+    "CommunityAndEnvironmentRank": 50,
+    "WorkEnvironmentRank": 39
+  },
+  {
+    "state": "Indiana",
+    "TotalHappinessScore": 47.41,
+    "EmotionalAndPhysicalWellBeingRank": 37,
+    "CommunityAndEnvironmentRank": 30,
+    "WorkEnvironmentRank": 22
+  },
+  {
+    "state": "Ohio",
+    "TotalHappinessScore": 46.81,
+    "EmotionalAndPhysicalWellBeingRank": 39,
+    "CommunityAndEnvironmentRank": 16,
+    "WorkEnvironmentRank": 36
+  },
+  {
+    "state": "Michigan",
+    "TotalHappinessScore": 46.51,
+    "EmotionalAndPhysicalWellBeingRank": 38,
+    "CommunityAndEnvironmentRank": 24,
+    "WorkEnvironmentRank": 35
+  },
+  {
+    "state": "Alaska",
+    "TotalHappinessScore": 46.27,
+    "EmotionalAndPhysicalWellBeingRank": 24,
+    "CommunityAndEnvironmentRank": 49,
+    "WorkEnvironmentRank": 37
+  },
+  {
+    "state": "Missouri",
+    "TotalHappinessScore": 45.38,
+    "EmotionalAndPhysicalWellBeingRank": 40,
+    "CommunityAndEnvironmentRank": 35,
+    "WorkEnvironmentRank": 27
+  },
+  {
+    "state": "New Mexico",
+    "TotalHappinessScore": 43.64,
+    "EmotionalAndPhysicalWellBeingRank": 42,
+    "CommunityAndEnvironmentRank": 17,
+    "WorkEnvironmentRank": 47
+  },
+  {
+    "state": "Tennessee",
+    "TotalHappinessScore": 43.35,
+    "EmotionalAndPhysicalWellBeingRank": 44,
+    "CommunityAndEnvironmentRank": 42,
+    "WorkEnvironmentRank": 26
+  },
+  {
+    "state": "Oklahoma",
+    "TotalHappinessScore": 40.69,
+    "EmotionalAndPhysicalWellBeingRank": 46,
+    "CommunityAndEnvironmentRank": 12,
+    "WorkEnvironmentRank": 44
+  },
+  {
+    "state": "Mississippi",
+    "TotalHappinessScore": 39.58,
+    "EmotionalAndPhysicalWellBeingRank": 43,
+    "CommunityAndEnvironmentRank": 38,
+    "WorkEnvironmentRank": 50
+  },
+  {
+    "state": "Alabama",
+    "TotalHappinessScore": 39.32,
+    "EmotionalAndPhysicalWellBeingRank": 45,
+    "CommunityAndEnvironmentRank": 46,
+    "WorkEnvironmentRank": 40
+  },
+  {
+    "state": "Kentucky",
+    "TotalHappinessScore": 38.36,
+    "EmotionalAndPhysicalWellBeingRank": 49,
+    "CommunityAndEnvironmentRank": 25,
+    "WorkEnvironmentRank": 45
+  },
+  {
+    "state": "Arkansas",
+    "TotalHappinessScore": 38.23,
+    "EmotionalAndPhysicalWellBeingRank": 47,
+    "CommunityAndEnvironmentRank": 31,
+    "WorkEnvironmentRank": 46
+  },
+  {
+    "state": "Louisiana",
+    "TotalHappinessScore": 34.81,
+    "EmotionalAndPhysicalWellBeingRank": 48,
+    "CommunityAndEnvironmentRank": 39,
+    "WorkEnvironmentRank": 49
+  },
+  {
+    "state": "West Virginia",
+    "TotalHappinessScore": 33.83,
+    "EmotionalAndPhysicalWellBeingRank": 50,
+    "CommunityAndEnvironmentRank": 32,
+    "WorkEnvironmentRank": 48
+  }
+]
