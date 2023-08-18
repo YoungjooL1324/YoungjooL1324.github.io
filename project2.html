@@ -64,8 +64,8 @@
                                 feature.properties.Census_Tract + "<br>" + "Percent Without Diploma: " + feature.properties.Percent_Without_Diploma);
               }
               }).addTo(map);
-              $("#toggleRivers").show();
-              $("#toggleRivers").click(function() {
+              $("#toggleSchool").show();
+              $("#toggleSchool").click(function() {
                     if(schoolVisible) {
                       schoolVisible = false;
                       schoolLayer.removeFrom(map);
@@ -92,7 +92,7 @@
     <h1>Hello Campus!</h1>
     <div id = "map"></div>
     <div id = "button">
-      <button id="toggleRivers" hidden> Toggle the layers.</button>
+      <button id="toggleSchool" hidden> Toggle the layers.</button>
     </div>
   </body>
 </html>
