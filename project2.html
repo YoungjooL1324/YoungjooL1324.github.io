@@ -11,6 +11,16 @@
       #map2 {height: 400px; width: 680px; margin: 10px; }
 
       html, body { height: 100%; margin: 0; padding: 0; }
+
+      .row {
+               display: flex;
+               flex-flow: row nowrap;
+           }
+           
+       .col {
+           display: flex;
+           flex-flow: column nowrap;
+       }
     </style>
 
     <script src="WAPovertyData.geojson">
@@ -103,7 +113,7 @@
         })
 
       //second map
-        var map2 = L.map('map', {
+        var map2 = L.map('map2', {
             center: [ 47.691, -122.278 ],
             zoom: 7,
             layers: [OpenStreetMap_HOT]
@@ -145,11 +155,24 @@
   <body onload="initialize()"> 
     <h1>Visualizing the relationship between education and poverty</h1>
     Click on a county to view specific information!
-    <div id = "map"></div>
-    <div id = "button"><button id="toggleSchool" hidden> Highschool graduation layer</button></div>
+    <div class = "row">
+            
+        <div class = "col">
+            <h3 style ="font-family: montserrat; color: #6e629e">High school graduation Data.</h3> 
+            <div id = "map"></div>
+            <div id = "button"><button id="toggleSchool" hidden> Highschool graduation layer</button></div>
+        </div>
+        
+        <br>
+        <div class = "col">
+            <h3 style ="font-family: montserrat; color: #6e629e">Poverty Data</h3> 
     
-    <div id = "map2"></div>
-    <div id = "button"><button id="togglePoverty" hidden> Poverty layer</button></div>
+            <div id = "map2"></div>
+            <div id = "button"><button id="togglePoverty" hidden> Poverty layer</button></div>
+        </div>
+    </div>
+      
+
     The national average high school graduation rate is 85%. 
     In the map above I've highlighted the counties in Washington which have a percentage below that rate. 
     Hover above them to learn more statistics.
