@@ -13,7 +13,7 @@
       html, body { height: 100%; margin: 0; padding: 0; }
     </style>
 
-    <script src="nhCoastalRegions.geojson">
+    <script src="WAPovertyData.geojson">
     </script>
     <script src="WAHighSchoolData.geojson">
     </script>
@@ -35,7 +35,7 @@
         if (numDiplomas > 14.7) {
           areaColor = "#eb5e0c"; 
         }
-        if (numDiplomas > 50) {
+        if (numDiplomas > 25) {
           areaColor = "#eb0c0f"; 
         }
 
@@ -49,10 +49,10 @@
         var numDiplomas = feature.properties.Percent_Living_in_Poverty;
         var areaColor = "#00008B";
 
-        if (numDiplomas > 20) {
+        if (numDiplomas > 30) {
           areaColor = "#eb5e0c"; 
         }
-        if (numDiplomas > 30) {
+        if (numDiplomas > 50) {
           areaColor = "#eb0c0f"; 
         }else{
           opacity: 1;
