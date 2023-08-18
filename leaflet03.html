@@ -75,9 +75,10 @@
             }else{
               riversVisible = true;
               riversLayer.addTo(map);
-            };
+            }
+	 });
 
-    $("#toggleCoast").click( function() {
+    $("#toggleCoast").click(function() {
               if (coastVisible) {
                     coastVisible = false;
                     coastLayer.removeFrom(map);
@@ -85,7 +86,7 @@
 
               else {
                  coastVisible = true;
-                  coastLayer.addTo(map);
+                 coastLayer.addTo(map);
 		
               }
             }); 
@@ -96,8 +97,8 @@
     <h1>Hello Campus!</h1>
     <div id = "map"></div>
     <div id = "button">
-      <button id="toggleRivers"> Toggle the River.</button>
-      <button id="toggleCoast"> Toggle the Coast.</button>
+      <button id="toggleRivers"> Toggle the River</button>
+      <button id="toggleCoast"> Toggle the Coast</button>
     </div>
   </body>
 </html>
