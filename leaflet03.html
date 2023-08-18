@@ -13,7 +13,7 @@
 
     <script src="nhCoastalRegions.geojson">
     </script>
-    <script src="nhDesignatedRivers.geojson">
+    <script src="nhDesignatedRiversnum1.geojson">
     </script>
   
     <script>
@@ -68,23 +68,27 @@
                     }
                     });
 
-          $("#toggleRivers").click(function() {
+         $("#toggleRivers").click(function() {
             if(riversVisible) {
               riversVisible = false;
               riversLayer.removeFrom(map);
             }else{
               riversVisible = true;
               riversLayer.addTo(map);
-            }
-            if(coastVisible) {
-              coastVisible = false;
-              coastLayer.removeFrom(map);
-            }else{
-              coastVisible = true;
-              coastLayer.addTo(map);
-            }
-          })
-          }  
+            };
+
+    $("#toggleCoast").click( function() {
+              if (coastVisible) {
+                    coastVisible = false;
+                    coastLayer.removeFrom(map);
+              }
+
+              else {
+                 coastVisible = true;
+                  coastLayer.addTo(map);
+		
+              }
+            }); 
           
     </script>
   </head>
@@ -92,7 +96,8 @@
     <h1>Hello Campus!</h1>
     <div id = "map"></div>
     <div id = "button">
-      <button id="toggleRivers"> Toggle the layers.</button>
+      <button id="toggleRivers"> Toggle the River.</button>
+      <button id="toggleCoast"> Toggle the Coast.</button>
     </div>
   </body>
 </html>
