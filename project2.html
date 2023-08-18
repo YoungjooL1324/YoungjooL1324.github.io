@@ -71,7 +71,7 @@
                       layers: [OpenStreetMap_HOT]
               });
 
-          var response = $.ajax({
+          var responseSchool = $.ajax({
             url: "WAHighSchoolData.geojson",
             dataType: "json",
             success: console.log("school data loaded!"),
@@ -81,8 +81,8 @@
           });
         
         
-        $.when(response).done(function() {
-              schoolLayer = L.geoJson(response.responseJSON,
+        $.when(responseSchool).done(function() {
+              schoolLayer = L.geoJson(responseSchool.responseJSON,
                             { style: schoolSymbology,
                             onEachFeature: function(feature, layer) {
                 layer.bindPopup("<b> Number Without Diploma: " + feature.properties.Num_Without_Diploma + "<\b><br>" + "Census Tract: " + 
@@ -119,7 +119,7 @@
         });
 
         $.when(responsePoverty).done(function() {
-              povertyLayer = L.geoJson(response.responseJSON,
+              povertyLayer = L.geoJson(responsePoverty.responseJSON,
                             { style: povertySymbology,
                             onEachFeature: function(feature, layer) {
                 layer.bindPopup("Census Tract: " + feature.properties.Census_Tract + "<br>" + "Total Population: " + feature.properties.Total_Population + "<br>" + "Number living in Poverty " + 
