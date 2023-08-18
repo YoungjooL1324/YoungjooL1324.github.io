@@ -7,7 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   
     <style>
-      #map { height: 400px; width: 700px; }
+      #map {height: 400px; width: 680px; margin: 10px; }
+      #map2 {height: 400px; width: 680px; margin: 10px; }
+
       html, body { height: 100%; margin: 0; padding: 0; }
     </style>
 
@@ -64,10 +66,11 @@
       
       function initialize() {
           var map = L.map('map', { 
-                      center: [ 47.636, -122.075 ],
+                      center: [ 38.7665, -95.7732],
                       zoom: 10,
                       layers: [OpenStreetMap_HOT]
               });
+
           var response = $.ajax({
             url: "WAHighSchoolData.geojson",
             dataType: "json",
@@ -99,6 +102,13 @@
               }) 
         })
 
+      //second map
+        var map2 = L.map("map2", {
+            center: [38.7665, -95.7732],
+            zoom: 10,
+            layers: [OpenStreetMap_HOT]
+        });
+
         var responsePoverty = $.ajax({
           url: "WAPovertyData.geojson",
           dataType: "json",
@@ -115,16 +125,16 @@
                 layer.bindPopup("Census Tract: " + feature.properties.Census_Tract + "<br>" + "Total Population: " + feature.properties.Total_Population + "<br>" + "Number living in Poverty " + 
                                 feature.properties.Num_Living_in_Poverty + "<br>" + "Percent Living in Poverty: " + feature.properties.Percent_Living_in_Poverty);
               }
-              }).addTo(map);
+              }).addTo(map2);
               $("#togglePoverty").show();
           
               $("#togglePoverty").click(function() {
                     if(povertyVisible) {
                       povertyVisible = false;
-                      povertyLayer.removeFrom(map);
+                      povertyLayer.removeFrom(map2);
                     }else{
                       povertyVisible = true;
-                      povertyLayer.addTo(map);
+                      povertyLayer.addTo(ma2p);
                     }
               }) 
         })
