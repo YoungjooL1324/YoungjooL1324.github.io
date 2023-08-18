@@ -19,6 +19,8 @@
     <script>
       var schoolLayer;
       var schoolVisible = true;
+      var povertyLayer;
+      var povertyVisible = true;
       var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
                                           { maxZoom: 19, 
                                               attribution: '&copy; <a href="http:/www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
@@ -40,6 +42,26 @@
           opacity: 1
         };
       }
+
+      function povertySymbology(feature) {
+        var numDiplomas = feature.properties.Percent_Living_in_Poverty;
+        var areaColor = "#00008B";
+
+        if (numDiplomas > 30) {
+          areaColor = "#eb5e0c"; 
+        }
+        if (numDiplomas > 50) {
+          areaColor = "#eb0c0f"; 
+        }else{
+          opacity: 1;
+        }
+
+        return {
+          color: areaColor,
+          opacity: 1
+        };
+      }
+      
       function initialize() {
           var map = L.map('map', { 
                       center: [ 47.636, -122.075 ],
@@ -87,29 +109,25 @@
         });
 
         $.when(responsePoverty).done(function() {
-              schoolLayer = L.geoJson(response.responseJSON,
-                            { style: schoolSymbology,
+              povertyLayer = L.geoJson(response.responseJSON,
+                            { style: povertySymbology,
                             onEachFeature: function(feature, layer) {
-                layer.bindPopup("<b> Number Without Diploma: " + feature.properties.Num_Without_Diploma + "<\b><br>" + "Census Tract: " + 
-                                feature.properties.Census_Tract + "<br>" + "Percent Without Diploma: " + feature.properties.Percent_Without_Diploma);
+                layer.bindPopup("Census Tract: " + feature.properties.Census_Tract + "<br>" + "Total Population: " + feature.properties.Total_Population + "<br>" + "Number living in Poverty " + 
+                                feature.properties.Num_Living_in_Poverty + "<br>" + "Percent Living in Poverty: " + feature.properties.Percent_Living_in_Poverty);
               }
               }).addTo(map);
-              $("#toggleSchool").show();
+              $("#togglePoverty").show();
           
-              $("#toggleSchool").click(function() {
-                    if(schoolVisible) {
-                      schoolVisible = false;
-                      schoolLayer.removeFrom(map);
+              $("#togglePoverty").click(function() {
+                    if(povertyVisible) {
+                      povertyVisible = false;
+                      povertyLayer.removeFrom(map);
                     }else{
-                      schoolVisible = true;
-                      schoolLayer.addTo(map);
+                      povertyVisible = true;
+                      povertyLayer.addTo(map);
                     }
               }) 
         })
-
-        
-        
-
   }  
           
     </script>
