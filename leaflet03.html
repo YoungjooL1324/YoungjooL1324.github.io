@@ -68,28 +68,27 @@
                     }
                     });
 
-         $("#toggleRivers").click(function() {
-            if(riversVisible) {
-              riversVisible = false;
-              riversLayer.removeFrom(map);
-            }else{
-              riversVisible = true;
-              riversLayer.addTo(map);
-            }
+	 $("#toggleRivers").click(function() {
+	    if(riversVisible) {
+	      riversVisible = false;
+	      riversLayer.removeFrom(map);
+	    }else{
+	      riversVisible = true;
+	      riversLayer.addTo(map);
+	    }
 	 });
 
-    $("#toggleCoast").click(function() {
-              if (coastVisible) {
-                    coastVisible = false;
-                    coastLayer.removeFrom(map);
-              }
-
-              else {
-                 coastVisible = true;
-                 coastLayer.addTo(map);
-		
-              }
-            }); 
+	    $("#toggleCoast").click(function() {
+	      if(coastVisible) {
+		    coastVisible = false;
+		    coastLayer.removeFrom(map);
+	      }
+	      else {
+		 coastVisible = true;
+		 coastLayer.addTo(map);
+	      }
+	    }); 
+      }
           
     </script>
   </head>
