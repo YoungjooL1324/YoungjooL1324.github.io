@@ -55,7 +55,7 @@
               alert(xhr.statusText);
             }
           });
-
+        
         $.when(response).done(function() {
               schoolLayer = L.geoJson(response.responseJSON,
                             { style: schoolSymbology,
