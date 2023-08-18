@@ -83,7 +83,7 @@
               schoolLayer = L.geoJson(response.responseJSON,
                             { style: schoolSymbology,
                             onEachFeature: function(feature, layer) {
-                layer.bindPopup("<b> Number Without Diploma: " + feature.properties.Num_Without_Diploma + "<\b><br>" + "Census Tract: " + 
+                layer.bindPopup("<b> Number Without Diploma: " + feature.properties.Num_Without_Diploma + "<br>" + "Census Tract: " + 
                                 feature.properties.Census_Tract + "<br>" + "Percent Without Diploma: " + feature.properties.Percent_Without_Diploma);
               }
               }).addTo(map);
