@@ -19,7 +19,6 @@
     <script>
       var schoolLayer;
       var schoolVisible = true;
-      var coastVisible = true;
       var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
                                           { maxZoom: 19, 
                                               attribution: '&copy; <a href="http:/www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
@@ -56,6 +55,7 @@
             }
           });
         
+        
         $.when(response).done(function() {
               schoolLayer = L.geoJson(response.responseJSON,
                             { style: schoolSymbology,
@@ -65,6 +65,7 @@
               }
               }).addTo(map);
               $("#toggleSchool").show();
+          
               $("#toggleSchool").click(function() {
                     if(schoolVisible) {
                       schoolVisible = false;
@@ -75,24 +76,50 @@
                     }
               }) 
         })
-        L.geoJson(coast_geojson,
-        { color: "ee87ff",
-        weight: 5,
-        opacity: .5,
-        onEachFeature: function(feature, layer) {
-          layer.bindPopup("<b> Coast Name: " + feature.properties.Site_Name + "<\b>");
-        }
+
+        var responsePoverty = $.ajax({
+          url: "WAPovertyData.geojson",
+          dataType: "json",
+          success: console.log("poverty data loaded!"),
+          error: function(xhr){
+            alert(xhr.statusText);
+          }
         });
-    
+
+        $.when(responsePoverty).done(function() {
+              schoolLayer = L.geoJson(response.responseJSON,
+                            { style: schoolSymbology,
+                            onEachFeature: function(feature, layer) {
+                layer.bindPopup("<b> Number Without Diploma: " + feature.properties.Num_Without_Diploma + "<\b><br>" + "Census Tract: " + 
+                                feature.properties.Census_Tract + "<br>" + "Percent Without Diploma: " + feature.properties.Percent_Without_Diploma);
+              }
+              }).addTo(map);
+              $("#toggleSchool").show();
+          
+              $("#toggleSchool").click(function() {
+                    if(schoolVisible) {
+                      schoolVisible = false;
+                      schoolLayer.removeFrom(map);
+                    }else{
+                      schoolVisible = true;
+                      schoolLayer.addTo(map);
+                    }
+              }) 
+        })
+
+        
+        
+
   }  
           
     </script>
   </head>
   <body onload="initialize()"> 
-    <h1>Hello Campus!</h1>
+    <h1>Visualizing the relationship between education and poverty</h1>
     <div id = "map"></div>
     <div id = "button">
-      <button id="toggleSchool" hidden> Toggle the layers.</button>
+      <button id="toggleSchool" hidden> Highschool graduation layer</button>
+      <button id="togglePoverty" hidden> Poverty layer</button>
     </div>
     The national average high school graduation rate is 85%. 
     In the map above I've highlighted the counties in Washington which have a percentage below that rate. 
