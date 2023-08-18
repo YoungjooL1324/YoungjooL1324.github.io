@@ -26,14 +26,14 @@
                                           });
         
       function schoolSymbology(feature) {
-        var numDiplomas = feature.properties.Num_Without_Diploma;
+        var numDiplomas = feature.properties.Percent_Without_Diploma;
         var areaColor = "#00008B";
 
-        if (numDiplomas > 500) {
-          areaColor = "#777777"; 
+        if (numDiplomas > 25) {
+          areaColor = "#eb5e0c"; 
         }
-        if (numDiplomas > 1000) {
-          areaColor = "#e9a3c9"; 
+        if (numDiplomas > 50) {
+          areaColor = "#eb0c0f"; 
         }
 
         return {
