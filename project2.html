@@ -82,6 +82,11 @@
                       zoom: 10,
                       layers: [OpenStreetMap_HOT]
               });
+          var map2 = L.map('map', { 
+                      center: [ 100.636, -122.075 ],
+                      zoom: 10,
+                      layers: [OpenStreetMap_HOT]
+              });
           var response = $.ajax({
             url: "WAHighSchoolData.geojson",
             dataType: "json",
