@@ -49,10 +49,10 @@
         var numDiplomas = feature.properties.Percent_Living_in_Poverty;
         var areaColor = "#00008B";
 
-        if (numDiplomas > 30) {
+        if (numDiplomas > 20) {
           areaColor = "#eb5e0c"; 
         }
-        if (numDiplomas > 50) {
+        if (numDiplomas > 30) {
           areaColor = "#eb0c0f"; 
         }else{
           opacity: 1;
@@ -67,7 +67,7 @@
       function initialize() {
           var map = L.map('map', { 
                       center: [ 47.691, -122.278 ],
-                      zoom: 10,
+                      zoom: 15,
                       layers: [OpenStreetMap_HOT]
               });
 
@@ -103,11 +103,17 @@
         })
 
       //second map
-        var map2 = L.map("map2", {
+        var map2 = L.map('map2;, {
             center: [ 47.691, -122.278 ],
-            zoom: 10,
+            zoom: 15,
             layers: [OpenStreetMap_HOT]
         });
+
+              var map = L.map('map', { 
+                      center: [ 47.691, -122.278 ],
+                      zoom: 15,
+                      layers: [OpenStreetMap_HOT]
+              });
 
         var responsePoverty = $.ajax({
           url: "WAPovertyData.geojson",
@@ -134,7 +140,7 @@
                       povertyLayer.removeFrom(map2);
                     }else{
                       povertyVisible = true;
-                      povertyLayer.addTo(ma2p);
+                      povertyLayer.addTo(map2);
                     }
               }) 
         })
