@@ -3,6 +3,7 @@
   <head>
     <title> Hello Campus!</title>
     <link rel ="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+     <link rel ="stylesheet" type="text/css" href="toggle.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   
@@ -47,10 +48,10 @@
         var numDiplomas = feature.properties.Percent_Living_in_Poverty;
         var areaColor = "#00008B";
 
-        if (numDiplomas > 30) {
+        if (numDiplomas > 20) {
           areaColor = "#edc605"; 
         }
-        if (numDiplomas > 50) {
+        if (numDiplomas > 30) {
           areaColor = "#eb0c0f"; 
         }else{
           opacity: 1;
@@ -136,6 +137,14 @@
     <h1>Visualizing the relationship between education and poverty</h1>
     <div id = "map"></div>
     <div id = "button">
+      <button id="toggleSchool" hidden>
+        <label class="toggle">
+          <input class="toggle-checkbox" type="checkbox">
+          <div class="toggle-switch"> </div>
+          <span class="toggle-label">Highschool graduation layer</span>
+        </label>
+      </button>
+        
       <button id="toggleSchool" hidden> Highschool graduation layer</button>
       <button id="togglePoverty" hidden> Poverty layer</button>
     </div>
