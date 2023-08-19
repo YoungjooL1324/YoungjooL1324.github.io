@@ -28,6 +28,18 @@
         padding: 10px;
       }
 
+      .button {
+        display: inline-block;
+        background-color: #7b38d8;
+        padding: 20px;
+        width: 200px;
+        color: #ffffff;
+        text-align: center;
+        border: 4px double #cccccc; /* add this line */
+        border-radius: 10px; /* add this line */
+        font-size: 28px;
+      }
+
     </style>
 
     <script src="WAPovertyData.geojson">
@@ -175,7 +187,7 @@
             <h3 style ="font-family: montserrat; color: #6e629e">Poverty Data</h3> 
     
             <div id = "map2"></div>
-            <div class = "center" id = "button"><button id="togglePoverty" hidden> Poverty layer</button></div>
+            <div class = "center" id = "button"><button id="togglePoverty" class = "button" hidden> Poverty layer</button></div>
         </div>
     </div>
     <br>
