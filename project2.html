@@ -71,7 +71,7 @@
                                           });
         
       function schoolSymbology(feature) {
-        var numDiplomas = feature.properties.Percent_Without_Diploma;
+        var percentNoDiplomas = feature.properties.Percent_Without_Diploma;
         var areaColor = "#00008B";
 
         if (percentNoDiplomas > 14.7) {
@@ -87,7 +87,7 @@
       }
 
       function povertySymbology(feature) {
-        var numDiplomas = feature.properties.Percent_Living_in_Poverty;
+        var percentPoverty = feature.properties.Percent_Living_in_Poverty;
         var areaColor = "#00008B";
 
         if (percentPoverty > 30) {
