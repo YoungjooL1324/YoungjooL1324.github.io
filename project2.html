@@ -60,6 +60,10 @@
                                           { maxZoom: 19, 
                                               attribution: '&copy; <a href="http:/www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
                                           });
+      var OpenStreetMap_HOT2 = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+                                          { maxZoom: 19, 
+                                              attribution: '&copy; <a href="http:/www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
+                                          });
         
       function schoolSymbology(feature) {
         var numDiplomas = feature.properties.Percent_Without_Diploma;
@@ -136,7 +140,7 @@
         var map2 = L.map('map2', {
             center: [ 47.691, -122.278 ],
             zoom: 7,
-            layers: [OpenStreetMap_HOT]
+            layers: [OpenStreetMap_HOT2]
         });
 
         var responsePoverty = $.ajax({
