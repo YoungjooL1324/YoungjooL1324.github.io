@@ -69,10 +69,10 @@
         var numDiplomas = feature.properties.Percent_Without_Diploma;
         var areaColor = "#00008B";
 
-        if (numDiplomas > 14.7) {
+        if (percentNoDiplomas > 14.7) {
           areaColor = "#eb5e0c"; 
         }
-        if (numDiplomas > 25) {
+        if (percentNoDiplomas > 25) {
           areaColor = "#eb0c0f"; 
         }
         return {
@@ -85,10 +85,10 @@
         var numDiplomas = feature.properties.Percent_Living_in_Poverty;
         var areaColor = "#00008B";
 
-        if (numDiplomas > 30) {
+        if (percentPoverty > 30) {
           areaColor = "#eb5e0c"; 
         }
-        if (numDiplomas > 50) {
+        if (percentPoverty > 50) {
           areaColor = "#eb0c0f"; 
         }else{
           opacity: 1;
