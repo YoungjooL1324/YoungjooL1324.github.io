@@ -158,9 +158,11 @@
         });
 
         $.when(responsePoverty).done(function() {
+              console.log("making the poverty layer");
               povertyLayer = L.geoJson(responsePoverty.responseJSON,
                             { style: povertySymbology,
                             onEachFeature: function(feature, layer) {
+                              console.log("loading", feature.properties.Census_Tract);
                 layer.bindPopup("Census Tract: " + feature.properties.Census_Tract + "<br>" + "Total Population: " + feature.properties.Total_Population + "<br>" + "Number living in Poverty " + 
                                 feature.properties.Num_Living_in_Poverty + "<br>" + "Percent Living in Poverty: " + feature.properties.Percent_Living_in_Poverty);
               }
@@ -191,7 +193,7 @@
             <h3 class = "center" style ="font-family: montserrat; color: #00008B">High School Graduation data by County</h3> 
             <div id = "map"></div>
             <div class = "center" id = "button"><button id="toggleSchool" class = "button" hidden> Toggle to see Graduation Statistics </button></div>
-            <i class = "legend" style="background: #00008B;">Percent less than 14.7</i>
+            <i class = "legend" style="background: #00008B;"></i>Percent less than 14.7
         </div>
         
         <br>
