@@ -45,16 +45,18 @@
       }
 
       .legend i {
-    width: 18px;
-    height: 18px;
-    float: left;
-    margin-right: 8px;
-    opacity: 0.7;
-}
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 8px;
+          opacity: 0.7;
+      }
 
     </style>
 
     <script>
+      $(document).ready(function() {
+        
       var schoolLayer;
       var schoolVisible = true;
       var povertyLayer;
@@ -102,7 +104,7 @@
         };
       }
       
-      function initialize() {
+      
           var map = L.map('map', { 
                       center: [ 47.691, -122.278 ],
                       zoom: 7,
@@ -175,11 +177,11 @@
                     }
               }) 
         })
-  }  
-          
+ 
+      })   
     </script>
   </head>
-  <body onload="initialize()"> 
+  <body> 
     <a href = "https://www.census.gov/quickfacts/fact/table/WA/PST045222"><img src= https://cdn.britannica.com/98/4998-004-C626B9A9/state-flag-field-Daughters-of-the-American-1915.jpg" style = "width: 400px,
   height: 300px"></a>
     <h1 class = "center" style="border-width:3px; border-style:solid; border-color:#327ba8; padding:25px">Visualizing the Relationship Between Education and Poverty</h1>
